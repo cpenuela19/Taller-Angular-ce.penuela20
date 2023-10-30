@@ -1,0 +1,33 @@
+<div class="containerHead">
+  <h3>
+    <img src="https://i.imgur.com/gBHzdMa.png" alt="TV Series Logo" style="width: auto; max-height: 30px; margin-bottom: 5px; margin-right: 10px;">
+    <span style="color: rgb(0, 0, 0); font-size: 18px;">TV Series</span>
+  </h3>
+</div>
+
+
+<div class = containerBody>
+  <table class="table">
+      <thead class="thead-dark">
+          <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Channel</th>
+          <th>Seasons</th>
+          </tr>
+      </thead>
+      <tbody id="seriesView" *ngFor="let serie of series">
+        <tr>
+          <td><strong>{{serie.id}}</strong></td>
+          <td id="idSerie">{{serie.name}}</td>
+          <td>{{serie.channel}}</td>
+          <td>{{serie.seasons}}</td>
+        </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+              <th colspan="4">Seasons average: {{average}}<h6 id = "average"></h6></th>
+          </tr>
+      </tfoot>
+  </table>
+</div>
